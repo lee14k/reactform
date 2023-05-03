@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react-hook-form": "^7.43.9",
+    "vite": "^4.3.4"
+  },
+  "devDependencies": {
+    "localhost": "^0.4.1"
+  }
+}
