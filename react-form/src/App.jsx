@@ -1,6 +1,10 @@
 import './App.css'
+import Button from './Button'
+import { useState } from 'react'
 
 function App() {
+const [fName, setFName] = useState('')
+const [lName, setLName]= useState('')
 
 
   return (
@@ -12,12 +16,20 @@ function App() {
 <form action='' id='form'>
   <label>
     First Name:
-    <input type="text" name="fname"></input>
+    <input type="text" 
+    name="fname"
+    value={fName}
+    onChange = {(e)=> setFName(e.target.value)}
+    ></input>
   </label>
   <br/>
   <label>
     Last Name:
-    <input type="text" name="lname"></input>
+    <input type="text" 
+    name="lname"
+    value={lName}
+    onChange = {(e)=> setLName(e.target.value)}
+    ></input>
   </label>
   <br/>
 
@@ -33,7 +45,13 @@ function App() {
 
   </label>
   <br/>
-  <button>Submit!</button>
+  <label>
+    Comments:
+    <input type="textarea" name="email"></input>
+
+  </label>
+  <br/>
+  <Button/>
 </form>
 
 </div>
