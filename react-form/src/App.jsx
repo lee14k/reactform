@@ -4,7 +4,11 @@ import { useState } from 'react'
 
 function App() {
 const [fName, setFName] = useState('')
-const [lName, setLName]= useState('')
+const [lName, setLName]= useState('') 
+const validate = () => {
+  return fName.length & lName.length
+}
+
 
 
   return (
@@ -51,7 +55,7 @@ const [lName, setLName]= useState('')
 
   </label>
   <br/>
-  <Button/>
+  <Button disabled = {!validate()}/>
 </form>
 
 </div>

@@ -1,7 +1,8 @@
-export default function Button() {
+export default function Button({onClick, disabled}) {
+  
     return ( 
         <div>
-    <button disabled ={true}>
+    <button onClick={onClick} disabled={disabled}>
         Submit
     </button>
     
